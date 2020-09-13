@@ -1,0 +1,16 @@
+{% extends "orders/index.html" %}
+{% block title %} 
+homePage
+{% endblock %}
+{% block body %}
+ <h1>Welcome, Please Login</h1>
+ {% if message %}
+    <div> {{ message }} </div>
+ {% endif %}
+    <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
+        <input name="Username"type="text" placeholder="name">
+        <input name="Password" type="password" placeholder="password">
+        <input type="submit" name="" id="">
+    </form>
+    <li><a href="{% url 'logout' %}">sign up</a></li>
+{% endblock %}

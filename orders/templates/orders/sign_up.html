@@ -1,0 +1,14 @@
+{% extends "orders/index.html" %}
+{% block title %}
+    Sign Up
+{% endblock %}
+{% block body %}
+    <form action="{url for 'sign_up'}" method="POST">
+        <input type="text" title="name" name="first_name">
+        <input type="text" name="last_name">
+        <input type="email" name="email">
+        <input type="Date" name="DOB">
+        <input type="password" name="password">
+        <input type="submit">
+    </form>
+{% endblock %}

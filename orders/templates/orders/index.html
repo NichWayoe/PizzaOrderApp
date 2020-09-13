@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'orders/css/main.css' %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body> 
+    {% block body %}
+    <h1>"Hello," {{user.username}}</h1>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% endblock %}
+</body>
+</html>
